@@ -36,6 +36,7 @@ for ((i=1; i<=NUM_ROBOTS; i++)); do
         --env="DISPLAY" \
         --env="QT_X11_NO_MITSHM=1" \
         --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+        --name="tb_cbf$i" \
         ghcr.io/achilleas2942/turtlebot-cbf \
         "$i" "$ROS_MASTER_IP" "$ROS_IP" &
     sleep 1
